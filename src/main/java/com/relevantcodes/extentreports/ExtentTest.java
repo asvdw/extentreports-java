@@ -29,7 +29,11 @@ public class ExtentTest implements IAddsMedia, Serializable {
         test.setName(testName == null ? "" : testName.trim()); 
         test.setDescription(description == null ? "" : description.trim());
     }
-    
+
+    public void setDescription(String description){
+        test.setDescription(description == null ? "" : description.trim());
+    }
+
     public synchronized ExtentTest createNode(String name, String description) {
         ExtentTest t = new ExtentTest(extent, name, description);
         t.getInternalTest().setLevel(test.getLevel() + 1);

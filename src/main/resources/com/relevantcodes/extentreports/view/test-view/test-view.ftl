@@ -91,6 +91,7 @@
 					<div class='test-heading'>
 						<span class='test-name'>${ test.name }</span>
 						<span class='test-time'>${ test.startTime?datetime?string }</span>
+						<span class='test-time'>${ test.description }</span>
 						<span class='test-status right ${ test.status }'>${ test.status }</span>
 					</div>
 					<div class='test-content hide'>

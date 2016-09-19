@@ -59,8 +59,12 @@
 				<#assign leaf=(node.hasChildren())?then('','leaf')>
 				<li class='node level-${ node.level } ${ leaf } ${ node.status }' status='${ node.status }' test-id='${ node.getID() }'>
 					<div class='collapsible-header'>
-						<div class='node-name'>${ node.name }</div>						
-						<span class='node-time'>${ node.startTime?datetime?string }</span>
+						<div class='node-name'>${ node.name }</div>
+<#if node.description?? && node.description?has_content>
+	<span class='node-time'>${ node.description} </span>
+</#if>
+
+						<!--span class='node-time'>${ node.startTime?datetime?string }</span-->
 						<span class='test-status right ${ node.status }'>${ node.status }</span>
 					</div>
 					<#if node.hasLogs()>

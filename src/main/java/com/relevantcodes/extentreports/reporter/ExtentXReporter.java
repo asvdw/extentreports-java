@@ -441,7 +441,7 @@ public class ExtentXReporter extends AbstractReporter {
         String model = "test";
         if (test.getLevel() > 0)
             model = "node";
-        
+
         Document doc = new Document(model, test.getObjectId())
                 .append("report", reportId)
                 .append("testName", test.getName())
